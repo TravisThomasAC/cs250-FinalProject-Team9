@@ -17,7 +17,7 @@ The topic of our project is about learning the user preference of music, and fee
 
 ### Instructions
 
-Here is the [instruction file](/instructions/project.pdf).
+Here is the [instruction file](/instructions/project.pdf). Our professor is [Dr.Mohan](https://github.com/amohangit).
 
 ### Presentation
 
