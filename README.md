@@ -4,7 +4,7 @@ This is a repository for Allegheny College computer science 250 final project. G
 
 The topic of our project is about learning the user preference of music, and feed new songs to user. The datasets are from [name]().
 
-For instructions, here is the [Protal](/instruction/project.pdf).
+For instructions, here is the [Protal](/instructions/project.pdf).
 
 If you want to check the raw code of my presentation, you can check our another [repository]().
 
