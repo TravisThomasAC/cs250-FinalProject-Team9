@@ -2,17 +2,23 @@
 
 This is a repository for Allegheny College computer science 250 final project. Group member includs [Travis Thomas](https://github.com/TravisThomasAC), [Matt Jones](https://github.com/JattMones), [Xingbang Liu](https://github.com/liux2).
 
-The topic of our project is about learning the user preference of music, and feed new songs to user. The datasets are from [name]().
-
-For instructions, here is the [Protal](/instructions/project.pdf).
-
-If you want to check the raw code of my presentation, you can check our another [repository]().
-
-Here is our content:
-
 ### Content:
 
+- [Intro and datasets](#introduction-and-datasets)
+- [Instructions](#instructions)
 - [Proposal](Proposal.md)
 - [Progress Report](ProgressReport.md)
-- [Presentation]()
+- [Presentation](#presentation)
 - [Final Report](FinalReport.md)
+
+### Introduction and Datasets
+
+The topic of our project is about learning the user preference of music, and feed new songs to user. The datasets are from [name]().
+
+### Instructions
+
+Here is the [instruction file](/instructions/project.pdf).
+
+### Presentation
+
+If you want to check the raw code of my presentation, you can check our another [repository]().
