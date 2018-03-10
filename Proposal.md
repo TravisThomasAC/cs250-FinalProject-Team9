@@ -11,7 +11,8 @@ Here is the mind map:
 In this program, we would use a searching algorithm to locate specific genres, a priority queue to sort the feeding list, and a array to store playlists.
 
 Here are some source I think can give us some hint:
-- []()
-- []()
-- []()
-- []()
+- [Priority queue](https://www.geeksforgeeks.org/priority-queue-class-in-java-2/)
+- [Deal with csv file](https://examples.javacodegeeks.com/core-java/writeread-csv-files-in-java-example/)
+- [read and write csv file](https://www.mkyong.com/java/how-to-read-and-parse-csv-file-in-java/)
+- [Binary search](https://www.geeksforgeeks.org/binary-search/)
+- [Quick sort](https://cathyatseneca.gitbooks.io/data-structures-and-algorithms/content/sorting/quick_sort.html)
