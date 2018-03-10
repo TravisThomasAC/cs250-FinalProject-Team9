@@ -6,10 +6,10 @@ This is a repository for Allegheny College computer science 250 final project. G
 
 - [Intro and datasets](#introduction-and-datasets)
 - [Instructions](#instructions)
-- [Proposal](Proposal.md)
-- [Progress Report](ProgressReport.md)
+- [Proposal](Proposal.pdf)
+- [Progress Report](ProgressReport.pdf)
 - [Presentation](#presentation)
-- [Final Report](FinalReport.md)
+- [Final Report](FinalReport.pdf)
 
 ### Introduction and Datasets
 

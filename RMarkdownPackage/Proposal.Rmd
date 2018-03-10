@@ -1,0 +1,36 @@
+---
+title: Final Project Proposal
+subtitle: User Preference Study and Song Feeding
+author: Xingbang Liu, Matt Jones, Travis Thomas
+date: March 10, 2018
+output:
+  pdf_document: 
+    highlight: tango
+---
+***
+
+In our final project, we are going to implement track one which is explained in [instructions](https://github.com/TravisThomasAC/cs250-FinalProject-Team9/blob/master/instructions/project.pdf). Specifically, we are going to implement music feeding algorithms, which can study user performances, profile user listening preferences, and finally feed new songs to user.
+
+There are two components of our program. The first component is datasets which includes user playlist, server-side playlist, and user preference data. User playlist the csv file which stores the songs from server-side playlist that user likes. Server-side playlist is the csv file which contains all playable songs. 
+The second component is the java code. There will be a main class which will read the user playlist, and print the feed list at the end. There will also be a study class which will scale the like degree, and finally get a list of genre. The third class is searching class which will use searching algorithm to locate each genre. Finally there will be a feeding class which will randomly choose songs from the list, and according to like degree to sort the feed list.
+
+Figure 1 shows the mind map.
+
+![Mind map](MindMap.jpg)
+
+In this program, we would use a searching algorithm to locate specific genres, a priority queue to sort the suggestion list, and a array to store playlists.
+
+Here are some source I think can give us some hint:
+
+1. Based on like degree and use it as priority index to sort the list.
+  + [Priority queue](https://www.geeksforgeeks.org/priority-queue-class-in-java-2/)
+
+2. These code can be used to read and write csv file. In these code, lines are handled by array or arrayList.
+  + [Deal with csv file](https://examples.javacodegeeks.com/core-java/writeread-csv-files-in-java-example/)
+  + [Read and write csv file](https://www.mkyong.com/java/how-to-read-and-parse-csv-file-in-java/)
+  
+3. Searching required genre by using binary search.
+  + [Binary search](https://www.geeksforgeeks.org/binary-search/)
+
+4. Sorting elements before searching.
+  + [Quick sort](https://cathyatseneca.gitbooks.io/data-structures-and-algorithms/content/sorting/quick_sort.html)
