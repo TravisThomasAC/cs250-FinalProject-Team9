@@ -18,6 +18,7 @@ The topic of our project is about learning the user preference of music, and fee
 ### Instructions
 
 Here is the [instruction file](/instructions/project.pdf). Our professor is [Dr.Mohan](https://github.com/amohangit).
+Also, the pdf file we have here contains clickable URL which cannot be shown in GitHub. Please download each files or go to RMarkdownPackage repository.
 
 ### Presentation
 
