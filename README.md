@@ -7,7 +7,8 @@ This is a repository for Allegheny College computer science 250 final project. G
 - [Intro and datasets](#introduction-and-datasets)
 - [Instructions](#instructions)
 - [Proposal](Proposal.pdf)
-- [Progress Report](ProgressReport.pdf)
+- [Progress Report 1](ProgressReport1.pdf)
+- [Progress Report 2](ProgressReport2.pdf)
 - [Presentation](#presentation)
 - [Final Report](FinalReport.pdf)
 
@@ -18,7 +19,7 @@ The topic of our project is about learning the user preference of music, and fee
 ### Instructions
 
 Here is the [instruction file](/instructions/project.pdf). Our professor is [Dr.Mohan](https://github.com/amohangit).
-Also, the pdf file we have here contains clickable URL which cannot be shown in GitHub. Please download each files or go to RMarkdownPackage repository.
+Also, the PDF file we have here contains clickable URL which cannot be shown in GitHub. Please download each files or go to [RMarkdownPackage](/RMarkdownPackage) repository.
 
 ### Presentation
 
