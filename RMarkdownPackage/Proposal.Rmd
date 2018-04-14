@@ -16,7 +16,7 @@ The second component is the java code. There will be a main class which will rea
 
 Figure 1 shows the mind map.
 
-![Mind map](MindMap.jpg)
+![Mind map](../images/MindMap.jpg)
 
 In this program, we would use a searching algorithm to locate specific genres, a priority queue to sort the suggestion list, and a array to store playlists.
 

@@ -60,7 +60,7 @@ output: pdf_document
   
   ***Stack userLikeList(stack contains user liked songs);***
   
-  In this list, we would cotain anoher column which marks like or not. "like" represents like, "dislike" represents don't like. So if user marks a song "like", program will first search through the userLikeList, if there are no repeated songs, then liked song will be added to userLikeList.
+  In this list, we would cotain another column which marks like or not. "like" represents like, "dislike" represents don't like. So, if user marks a song "like", program will first search through the userLikeList, if there are no repeated songs, then liked song will be added to userLikeList.
   
   ***while(hasNext())***
   
