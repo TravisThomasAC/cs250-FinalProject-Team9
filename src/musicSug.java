@@ -16,9 +16,9 @@ public class musicSug{
 
   public static void conversition(){
     System.out.println("Welcome to AlleKids Music!");
-    System.out.println("Do you want to do?");
+    System.out.println("What do you want to do?");
     System.out.println("Menu: 1.Like | 2.Explore | 3.Daily Selection | 4.quit");
-    System.out.println("Please select number.");
+    System.out.println("Please select a number.");
 
     scan = new Scanner(System.in);
 
@@ -101,7 +101,7 @@ public class musicSug{
     SortInt RY = new SortInt();
     SortString SAG = new SortString();
     scan = new Scanner(System.in);
-    
+
     System.out.println("How would you like to sort your music list?");
     System.out.println("Available options: Rank, Song, Artist, Year, Genre, Stop");
     try{
