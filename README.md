@@ -21,6 +21,12 @@ The topic of our project is about learning the user preference of music, and fee
 Here is the [instruction file](/instructions/project.pdf). Our professor is [Dr.Mohan](https://github.com/amohangit).
 Also, the PDF file we have here contains clickable URL which cannot be shown in GitHub. Please download each files or go to [RMarkdownPackage](/RMarkdownPackage) repository.
 
+To use our code,
+
+1. download the whole repository, then go to src repository.
+2. use ```javac *java``` to compile every java file in this repository, then use ```java musicSug``` to run main class.
+3. follow the prompt in terminal.
+
 ### Presentation
 
 If you want to check the raw code of my presentation, you can check our another [repository]().
