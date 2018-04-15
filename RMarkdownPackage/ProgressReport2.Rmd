@@ -43,6 +43,6 @@ This prediction method is very accurate, but there are too many calculations, an
 
 #### Model-based
 
-  As for the second method, the algorthm will analys the playlist of a person, then do recommendations. Models such as latent factor is used in this method. 
+  As for the second method, the algorthm will analys the playlist of a person, then do recommendations. Models such as latent factor is used in this method. ***I would explain more here***
 
   Of course, in the real world, if we implement algorithm based on song, the second demention factor will repidly increase. Plus there will be too many songs. Therefore it will be more effecient if we calculate based on tags of the song. For example, for "The Sound of Slience" by Simon & Garfunel, tags can be Folk Rock, 60s, and Movie Track. Due to the time we have is limited, we would not build tags databeses, therefore we would analys by songs. Additionally, we would use the second method to calcutated scores because we do not have time to build multiple users.
