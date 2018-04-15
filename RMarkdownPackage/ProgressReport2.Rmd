@@ -1,10 +1,20 @@
 ---
 title: Final Project Progress Report
-subtitle: Report 1
+subtitle: Report two
 author: Xingbang Liu, Matt Jones, Travis Thomas
-date: "April 2, 2018"
+date: "April 14, 2018"
 output: pdf_document
 ---
 ***
 
-For the algorithm for forcasting potential user like song, which is [Collaborative filtering](https://en.wikipedia.org/wiki/Collaborative_filtering), there are two algorithms that we know. The first one is user grouping method. In this method, 
+  So far, we have finished implementing the basic strchture of the program. We have main class which is a do while loop, if user don't want to quit, the program will continue load coversition class. conversition class is a class that will require commands from user. Based on different commands, the class will rediract usere to different classes. For example: 
+
+```
+Menu: 1.Like | 2.Explore | 3.Daily Selection | 4.quit
+```
+
+If user type "1", then the program will direct user to liked song list, then like class will show user the music list. The like class will also ask the user to sort the list if the user wants.  In the rest of important classes, such as ***explore()*** and ***dailySelection()***, we will impliment our rendom suggesting system and forcast suggesting system. 
+
+In explore class, we will read the Cloud musiclist CSV file and rendomly selet few songs and feed it to user based on song's name initial letter sequence. If the user likes any of the songs, we will ask if the user want to add it to his liked music list. If he do, the program will mark a song with y in the last column.
+
+  For the algorithm for forcasting potential user like song, which is [Collaborative filtering](https://en.wikipedia.org/wiki/Collaborative_filtering), there are two algorithms that we know. The first one is user grouping method. In this method, the althoritm with first track down people who have simlier activities, then recommond songs to each other by their playlists. For example, 

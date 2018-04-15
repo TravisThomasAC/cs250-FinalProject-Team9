@@ -1,6 +1,6 @@
 ---
 title: Final Project Progress Report
-subtitle: Report 1
+subtitle: Report two
 author: Xingbang Liu, Matt Jones, Travis Thomas
 date: "April 2, 2018"
 output: pdf_document
