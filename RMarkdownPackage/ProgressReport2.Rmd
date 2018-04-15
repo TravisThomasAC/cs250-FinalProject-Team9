@@ -6,3 +6,5 @@ date: "April 2, 2018"
 output: pdf_document
 ---
 ***
+
+For the algorithm for forcasting potential user like song, which is [Collaborative filtering](https://en.wikipedia.org/wiki/Collaborative_filtering), there are two algorithms that we know. The first one is user grouping method. In this method, 

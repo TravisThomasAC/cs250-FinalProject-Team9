@@ -7,13 +7,13 @@ output: pdf_document
 ---
 ***
 
-  As we discussed and brainstormed our "Music Suggestions & Making Software" we decided the simplest playlist storing data structure, an ArrayList Stack, provides us with methods useful to the ones we would call in our program (Play, Next, etc.). Because of this, we will be using many different stacks to store and sort our data. We will also be using an ArrayList for its useful indexing of elements, and because it works with the "contains" method to make sure our playlist doesn't contain repeats. We also will be using the "file reading software" our team has developed in previous labs, to store all the initial data, and continue to discuss whether we should store our final output in a csv file as well.
+  As we discussed and brainstormed our "Music Suggestions & Making Software" we decided the simplest playlist storing data structure, an ArrayList Stack, provides us with methods useful to the ones we would call in our program (Play, Next, etc.). Because of this, we will be using many different stacks to store and sort our data. We will also be using an ArrayList for its useful indexing of elements, and because it works with the "contains" method to make sure our playlist doesn't contain repeats. We also will be using the "file reading software" our team has developed in previous labs, to store all the initial data, and continue to discuss whether we should store our final output in a CSV file as well.
 
-  For sorting technique, we did not plan much for now, but We will use our previous bubblesort algorithm to sort the final output/playlist alphabetically.
+  For sorting technique, we did not plan much for now, but We will use our previous bubble sort algorithm to sort the final output/playlist alphabetically.
 
 ### Basic Code Structure
 
-  By conbining the code we had in the previous lab and the code we found [online](https://dzone.com/articles/how-to-read-a-big-csv-file-with-java-8-and-stream). In this siurce, we found how to develop effecient algorithm to deal with large amount of data. We can use 2-dementional ArrayList to store our music cloud list. Factors by rows, and items by columns.
+  By combining the code we had in the previous lab and the code we found [online](https://dzone.com/articles/how-to-read-a-big-csv-file-with-java-8-and-stream). In this source, we found how to develop effecient algorithm to deal with a large amount of data. We can use 2-dimensional ArrayList to store our music cloud list. Factors by rows, and items by columns.
 
   For the example of our previous code of reading CSV file:
 ```
@@ -60,17 +60,17 @@ output: pdf_document
   
   ***Stack userLikeList(stack contains user liked songs);***
   
-  In this list, we would cotain another column which marks like or not. "like" represents like, "dislike" represents don't like. So, if user marks a song "like", program will first search through the userLikeList, if there are no repeated songs, then liked song will be added to userLikeList.
+  In this list, we would contain another column which marks like or not. "like" represents like, "dislike" represents don't like. So, if a user marks a song "like", the program will first search through the userLikeList, if there are no repeated songs, then liked song will be added to userLikeList.
   
   ***while(hasNext())***
   
   ***do commends;***
   
-  This means user could kept prompting commands until user prompted quit.
+  This means the user could keep prompting commands until user prompted quit.
 
 ### Main Code Methods
 
-  To show playlist, the program will print out the whole list. Then, user can get specific factors, such as artist, song, genre, by typing it. 
+  To show playlist, the program will print out the whole list. Then, the user can get specific factors, such as artist, song, genre, by typing it. 
   
 ```
   //Play: 
@@ -93,4 +93,4 @@ output: pdf_document
 ```
 ### Conlusion
 
-  This is the work we have for now. Next, we would like to finishing most of the code we planned here, and think of more functions we could add. 
+  This is the work we have for now. Next, we would like to finish most of the code we planned here, and think of more functions we could add. 

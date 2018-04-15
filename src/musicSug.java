@@ -88,6 +88,12 @@ public class musicSug{
   }
 
 //read through the "cloud list" and randomly return some songs
+/*ToDo:
+*Find dataset
+*edit like csvFile by the format of cloud dataset
+*read file Founction
+*move raws to like if user likes(maybe use ArrayList and the add class in lab4)
+*/
   public static void explore(){
 
   }
