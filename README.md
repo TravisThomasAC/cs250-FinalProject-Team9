@@ -14,7 +14,7 @@ This is a repository for Allegheny College computer science 250 final project. G
 
 ### Introduction and Datasets
 
-The topic of our project is about learning the user preference of music, and feed new songs to user. The datasets are from [name]().
+The topic of our project is about learning the user preference of music, and feed new songs to user. The datasets are from Internet, we have modified it to make it more simple.
 
 ### Instructions
 
