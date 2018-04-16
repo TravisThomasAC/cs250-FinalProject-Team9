@@ -11,7 +11,7 @@ public class musicSug{
     do{
       conversition();
     }
-    while(quit());
+    while(answer());
 
   }
 
@@ -46,6 +46,7 @@ public class musicSug{
         System.out.println("Please select number.");
       }
     }
+    System.out.println("Would you like to play again? (y/n)");
   }
 
   public static void likes(){
@@ -87,7 +88,6 @@ public class musicSug{
 
 //read through the "cloud list" and randomly return some songs
 /*ToDo:
-*read file Founction
 *move raws to like list if user likes(maybe use ArrayList and the add class in lab4)
 */
   public static void explore(){
@@ -217,20 +217,4 @@ public class musicSug{
      }
   }
 
-  public static boolean quit(){
-    scan = new Scanner(System.in);
-
-      System.out.println("Would you like to play again? (y/n)");
-        String yORn = scan.nextLine().toLowerCase();//answer method?
-        if (yORn.equals("y")){
-            return true;
-        }
-        else if (yORn.equals("n")){
-            return false;
-        }
-        else{
-            System.out.println("Please answer y or n.");
-            return quit();
-        }
-  }
 }
