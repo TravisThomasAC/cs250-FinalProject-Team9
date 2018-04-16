@@ -28,7 +28,7 @@ public class musicSug{
       if(command.equals("1")){
         likes();
         System.out.println("Would you like to sort your like list? (y/n)");
-        if(answer() == true){
+        if(answer() == true){//will this work? or do we have to run the answer() method outside of the if loop?
           sortList();
         }
       }
@@ -221,7 +221,7 @@ public class musicSug{
     scan = new Scanner(System.in);
 
       System.out.println("Would you like to play again? (y/n)");
-        String yORn = scan.nextLine().toLowerCase();
+        String yORn = scan.nextLine().toLowerCase();//answer method?
         if (yORn.equals("y")){
             return true;
         }
