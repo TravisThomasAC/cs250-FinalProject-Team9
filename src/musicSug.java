@@ -5,6 +5,7 @@ public class musicSug{
 
   private static Scanner scan;
   private static final String csvLike = "../dataset/liked.csv";
+  private static final String csvCloud = "../dataset/music.csv";
 
   public static void main(String[] args) {
     do{
@@ -90,7 +91,75 @@ public class musicSug{
 *move raws to like list if user likes(maybe use ArrayList and the add class in lab4)
 */
   public static void explore(){
+    BufferedReader br = null;
+    String line = "";
+    String cvsSplitBy = ",";
+    ArrayList<ArrayList<String>> exploreSongs = new ArrayList<ArrayList<String>>();
+    int lineCount = 0;
 
+    try{
+      br = new BufferedReader(new FileReader(csvCloud));
+      //get cloud csv line number
+      while(br.readLine() != null){
+        lineCount++;
+      }
+      br.close();
+    }catch(FileNotFoundException e){
+      e.printStackTrace();
+    }catch (IOException e) {
+        e.printStackTrace();
+    }
+
+    //Read through file and store elements in ArrayList
+    try {
+        br = new BufferedReader(new FileReader(csvCloud));
+        System.out.println("Song   Artist   Year   Genre   Like");
+        while ((line = br.readLine()) != null) {
+          int i = 0;
+            // use comma as separator
+            String[] Songs = line.split(cvsSplitBy);
+            //Store songs to 2D ArrayList
+            exploreSongs.add(new ArrayList<String>());
+              for(int j = 1; j < 6; j++){
+                exploreSongs.get(i).add(Songs[j]);
+              }
+            i++;
+          }
+          //random Selection
+          Random rand = new Random();
+          int numOfSongs = 5;
+          int randIndex = -1;
+          int temp;
+
+          for(int i = 0; i < numOfSongs; i++){
+            temp = randIndex;
+            randIndex = rand.nextInt(lineCount);
+            if(randIndex != temp){
+              //for(int j = 0; j < 5; j++){
+                System.out.println(exploreSongs.get(randIndex).get(0));
+              //}
+            }
+            else{
+              randIndex++;
+              //for(int j = 0; j < 5; j++){
+                System.out.println(exploreSongs.get(randIndex).get(0));
+              //}
+            }
+          }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
   }
 
 //return song that user might likes
