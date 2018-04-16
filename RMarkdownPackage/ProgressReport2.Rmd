@@ -8,7 +8,7 @@ subtitle: Report two
 ---
 ***
 
-  So far, we have finished implementing the basic strchture of the program. Our main class is a do while loop, if the user doesn't want to quit, the program will continue by load coversation class. Conversation class is a class that will require commands from user. Based on different commands, the class will redirect the user to different classes. For example: 
+  So far, we have finished implementing the basic structure of the program. Our main class is a do while loop, if the user doesn't want to quit, the program will continue by load coversation class. Conversation class is a class that will require commands from user. Based on different commands, the class will redirect the user to different classes. For example: 
 
 ```
 Menu: 1.Like | 2.Explore | 3.Daily Selection | 4.quit
