@@ -12,7 +12,7 @@ public class SortInt{
   public void addSong(data name){
     dat.add(name);
   }
-
+/*
   public void readRank() throws IOException{
     BufferedReader br = null;
     String line = "";
@@ -47,12 +47,12 @@ public class SortInt{
       }
 
   }
-
+*/
   public void readYear() throws IOException{
     BufferedReader br = null;
     String line = "";
     String csvSplitBy = ",";
-    int yearCol = 3;
+    int yearCol = 2;
     List <String> output = new ArrayList<>();
 
     try{

@@ -62,7 +62,7 @@ public class musicSug{
         // use comma as separator
         String[] Songs = line.split(cvsSplitBy);
 
-        System.out.println(Songs[1] + "  |  " + Songs[2] + "  |  " + Songs[3] + "  |  " + Songs[4] + "  |  " + Songs[5]);
+        System.out.println(Songs[1] + "  |  " + Songs[1] + "  |  " + Songs[2] + "  |  " + Songs[3] + "  |  " + Songs[4]);
       }
     } catch (FileNotFoundException e) {
         e.printStackTrace();
@@ -80,9 +80,6 @@ public class musicSug{
   }
 
 //read through the "cloud list" and randomly return some songs
-/*ToDo:
-*move raws to like list if user likes(maybe use ArrayList and the add class in lab4)
-*/
   public static void explore(){
     BufferedReader br = null;
     String line = "";
@@ -153,6 +150,61 @@ public class musicSug{
                 }
             }
         }
+
+      System.out.println("Do you like any of these songs?(y/n)");
+      if(answer()==true){
+        addSong();
+      }
+  }
+
+  public static void addSong(){
+    //problems here: I can do copy from csv to csv
+    //also, implement a search would be better
+    scan = new Scanner(System.in);
+      System.out.println("What is the name of the song?");
+      String song = scan.nextLine();
+      System.out.println("What is the name of the singer?");
+      String artist = scan.nextLine();
+      System.out.println("When is the song published?");
+      int year = scan.nextInt();
+      System.out.println("What is the genre of the song?");
+      String genre = scan.nextLine();
+
+      char like = 'y';
+
+    data newSong = new data(song, artist, year, genre, like);
+    List<data> adds = new ArrayList<data>();
+    adds.add(newSong);
+
+    FileWriter fileWriter = null;
+    try{
+      fileWriter = new FileWriter(csvLike, true);
+
+      for(data Songs : adds){
+        fileWriter.append(Songs.getSong());
+        fileWriter.append(",");
+        fileWriter.append(Songs.getArtist());
+        fileWriter.append(",");
+        fileWriter.append(String.valueOf(Songs.getYear()));
+        fileWriter.append(",");
+        fileWriter.append(Songs.getGenre());
+        fileWriter.append(",");
+        fileWriter.append(String.valueOf(Songs.getLike()));
+        fileWriter.append("\n");
+      }
+      fileWriter.flush();
+    }catch(Exception e){
+      System.out.println("Error in CsvFileWriter !!!");
+      e.printStackTrace();
+    }finally {
+      try {
+        fileWriter.close();
+      } catch (IOException e){
+        System.out.println("Error while flushing/closing fileWriter !!!");
+        e.printStackTrace();
+      }
+    }
+    System.out.println("The song has been added to your like list!\n"+"Back to menu...");
   }
 
 //return song that user might likes

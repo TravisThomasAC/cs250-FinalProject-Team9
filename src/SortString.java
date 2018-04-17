@@ -17,7 +17,7 @@ public class SortString{
     BufferedReader br = null;
     String line = "";
     String csvSplitBy = ",";
-    int songCol = 1;
+    int songCol = 0;
     List <String> output = new ArrayList<>();
 
     try{
@@ -52,7 +52,7 @@ public class SortString{
     BufferedReader br = null;
     String line = "";
     String csvSplitBy = ",";
-    int artistCol = 2;
+    int artistCol = 1;
     List <String> output = new ArrayList<>();
 
     try{
@@ -87,7 +87,7 @@ public class SortString{
     BufferedReader br = null;
     String line = "";
     String csvSplitBy = ",";
-    int genreCol = 4;
+    int genreCol = 3;
     List <String> output = new ArrayList<>();
 
     try{
