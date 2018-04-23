@@ -62,7 +62,7 @@ public class musicSug{
         // use comma as separator
         String[] Songs = line.split(cvsSplitBy);
 
-        System.out.println(Songs[1] + "  |  " + Songs[1] + "  |  " + Songs[2] + "  |  " + Songs[3] + "  |  " + Songs[4]);
+        System.out.println(Songs[0] + "  |  " + Songs[1] + "  |  " + Songs[2] + "  |  " + Songs[3] + "  |  " + Songs[4]);
       }
     } catch (FileNotFoundException e) {
         e.printStackTrace();
