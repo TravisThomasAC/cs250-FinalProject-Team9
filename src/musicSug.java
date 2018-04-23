@@ -6,6 +6,7 @@ public class musicSug{
   private static Scanner scan;
   private static final String csvLike = "../dataset/liked.csv";
   private static final String csvCloud = "../dataset/music.csv";
+  private static int[] randomIndexs = new int[5];
 
   public static void main(String[] args) {
     do{
@@ -123,6 +124,8 @@ public class musicSug{
           for(int i = 0; i < numOfSongs; i++){
             temp = randIndex;
             randIndex = rand.nextInt(lineCount);
+            int a = i+1;
+            System.out.print(a +": ");
             if(randIndex != temp){
               for(int j = 0; j < 5; j++){
                 System.out.print(exploreSongs.get(randIndex).get(j)+"  |  ");
@@ -134,6 +137,7 @@ public class musicSug{
                 System.out.print(exploreSongs.get(randIndex).get(j)+"  |  ");
               }
             }
+            randomIndexs[i] = randIndex;
             System.out.println();
           }
 
@@ -161,15 +165,12 @@ public class musicSug{
     //problems here: I can do copy from csv to csv
     //also, implement a search would be better
     scan = new Scanner(System.in);
-      System.out.println("What is the name of the song?");
-      String song = scan.nextLine();
-      System.out.println("What is the name of the singer?");
-      String artist = scan.nextLine();
-      System.out.println("When is the song published?");
-      int year = scan.nextInt();
-      System.out.println("What is the genre of the song?");
-      String genre = scan.nextLine();
-
+      System.out.println("What is the number of the song?");
+      int index = scan.nextInt()-1;
+      /*SEARCH FOR INDEX IN randomIndexs
+      String csvIndex = randomIndexs[index];
+      */
+/*
       char like = 'y';
 
     data newSong = new data(song, artist, year, genre, like);
@@ -205,6 +206,7 @@ public class musicSug{
       }
     }
     System.out.println("The song has been added to your like list!\n"+"Back to menu...");
+*/
   }
 
 //return song that user might likes
