@@ -6,7 +6,8 @@ public class musicSug{
   private static Scanner scan;
   private static final String csvLike = "../dataset/liked.csv";
   private static final String csvCloud = "../dataset/music.csv";
-  private static int[] randomIndexs = new int[5];
+  private static int[] randomIndexes = new int[5];
+  private static ArrayList<ArrayList<String>> exploreSongs = new ArrayList<ArrayList<String>>();
 
   public static void main(String[] args) {
     do{
@@ -85,7 +86,6 @@ public class musicSug{
     BufferedReader br = null;
     String line = "";
     String cvsSplitBy = ",";
-    ArrayList<ArrayList<String>> exploreSongs = new ArrayList<ArrayList<String>>();
     int lineCount = 0;
 
     try{
@@ -137,7 +137,7 @@ public class musicSug{
                 System.out.print(exploreSongs.get(randIndex).get(j)+"  |  ");
               }
             }
-            randomIndexs[i] = randIndex;
+            randomIndexes[i] = randIndex;
             System.out.println();
           }
 
@@ -167,6 +167,7 @@ public class musicSug{
     scan = new Scanner(System.in);
       System.out.println("What is the number of the song?");
       int index = scan.nextInt()-1;
+      System.out.println(exploreSongs.get(randomIndexes[index]).get(0));
       /*SEARCH FOR INDEX IN randomIndexs
       String csvIndex = randomIndexs[index];
       */
