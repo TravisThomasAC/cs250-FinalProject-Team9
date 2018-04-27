@@ -1,3 +1,4 @@
+package test;
 import java.io.*;
 import java.util.*;
 
@@ -45,6 +46,7 @@ public class SortString{
     for(String s: output){
       System.out.println(s);
     }
+
   }
 
   public void readArtist() throws IOException{
@@ -116,7 +118,7 @@ public class SortString{
     }
   }
 
-
+//Exchange sort
   public void sortString(List<String> x){
     int i,j;
     String temp;

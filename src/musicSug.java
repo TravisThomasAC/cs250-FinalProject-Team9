@@ -11,6 +11,7 @@ public class musicSug{
   private static ArrayList<String> song;
   private static ArrayList<ArrayList<String>> exploreSongs = new ArrayList<ArrayList<String>>();
   private static int lineCount = 10030;
+
   public static void main(String[] args) {
     do{
       conversition();
@@ -32,8 +33,7 @@ public class musicSug{
         System.out.println("Would you like to sort your like list? (y/n)");
         if(answer()==true){
           sortList();
-        }
-        System.out.println("You are at menu now");
+        } System.out.println("You are at menu now");
       }
       else if(command.equals("2")){
         explore();
@@ -59,7 +59,7 @@ public class musicSug{
 
     System.out.println("Here is your liked songs:");
 
-//Read through file and store elements in ArrayList
+    //Read through file and store elements in ArrayList
     try {
     br = new BufferedReader(new FileReader(csvLike));
     System.out.println("Song  |  Artist  |  Year  |  Genre  |  Like");
@@ -143,10 +143,6 @@ public class musicSug{
                 }
             }
         }
-
-      //@Here ************************************************************************************
-      for(int i : randomIndexes){
-        System.out.println(i);}
       System.out.println("Do you like any of these songs?(y/n)");
       if(answer()==true){
         addSong();
@@ -170,7 +166,6 @@ public class musicSug{
     FileWriter fileWriter = null;
     try{
       fileWriter = new FileWriter(csvLike, true);
-
         fileWriter.append(exploreSongs.get(randomIndexes[index]).get(1));
         fileWriter.append(",");
         fileWriter.append(exploreSongs.get(randomIndexes[index]).get(2));
@@ -193,7 +188,7 @@ public class musicSug{
         e.printStackTrace();
       }
     }
-    System.out.println("\nThe song has been added to your like list!\n"+"You are at meun now.");
+    System.out.println("\nThe song has been added to your like list!\n");
 
     BufferedWriter writer = null;
     try{
@@ -254,7 +249,6 @@ public class musicSug{
     try{
       while(scan.hasNext()){
         String command = scan.nextLine().toLowerCase();
-
         if (command.equals("song")){
           SAG.readSong();
         }

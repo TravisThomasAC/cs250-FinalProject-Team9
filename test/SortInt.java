@@ -1,9 +1,11 @@
+package test;
 import java.io.*;
 import java.util.*;
 
 public class SortInt{
   private ArrayList<data> dat;
   private static final String csvLike = "../dataset/liked.csv";
+  private long timeElapsed1 = 0;
 
   public SortInt(){
     dat = new ArrayList<data>();
@@ -44,12 +46,14 @@ public class SortInt{
     for(String s: output){
       System.out.println(s);
     }
+    System.out.println(timeElapsed1);
   }
 //bubble sort
   public void sortString(List<String> x){
     int j;
     boolean flag = true;
     String temp;
+    long startTime1 = System.nanoTime();
 
     while(flag){
       flag = false;
@@ -62,5 +66,7 @@ public class SortInt{
         }
       }
     }
+    long endTime1 = System.nanoTime();
+    timeElapsed1 = endTime1-startTime1;
   }
 }
