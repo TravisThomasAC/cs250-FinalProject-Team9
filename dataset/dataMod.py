@@ -9,13 +9,13 @@ def melodyRating():
     totalrows = len(df['SongID'])
 
     for i in range(totalrows):
-        rand = randint(0,10)
+        rand = randint(1,10)
         ratings.append(rand)
 
     return ratings
 
 
-def toCSV():
+def createColumn():
 
     ratings = melodyRating()
     HEADER = [["Melody"]]
@@ -45,6 +45,9 @@ def merge_df():
 
     writer.save()
 
+def TO_CSV():
+    merge_df()
+    df = pd.read_excel("music3.xlsx")
+    df.to_csv('music.csv', encoding='utf-8', index=False)
 
-
-merge_df()
+TO_CSV()
