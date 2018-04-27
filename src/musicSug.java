@@ -6,9 +6,11 @@ public class musicSug{
   private static Scanner scan;
   private static final String csvLike = "../dataset/liked.csv";
   private static final String csvCloud = "../dataset/music.csv";
+  private static final String csvTest = "../dataset/test.csv";
   private static int[] randomIndexes = new int[5];
+  private static ArrayList<String> song;
   private static ArrayList<ArrayList<String>> exploreSongs = new ArrayList<ArrayList<String>>();
-
+  private static int lineCount = 10030;
   public static void main(String[] args) {
     do{
       conversition();
@@ -31,6 +33,7 @@ public class musicSug{
         if(answer()==true){
           sortList();
         }
+        System.out.println("You are at menu now");
       }
       else if(command.equals("2")){
         explore();
@@ -86,20 +89,6 @@ public class musicSug{
     BufferedReader br = null;
     String line = "";
     String cvsSplitBy = ",";
-    int lineCount = 0;
-
-    try{
-      br = new BufferedReader(new FileReader(csvCloud));
-      //get cloud csv line number
-      while(br.readLine() != null){
-        lineCount++;
-      }
-      br.close();
-    }catch(FileNotFoundException e){
-      e.printStackTrace();
-    }catch (IOException e) {
-        e.printStackTrace();
-    }
 
     //Read through file and store elements in ArrayList
     try {
@@ -109,8 +98,8 @@ public class musicSug{
             // use comma as separator
             String[] Songs = line.split(cvsSplitBy);
             //Store songs to 2D ArrayList
-            ArrayList<String> song = new ArrayList<String>();
-              for(int j = 1; j < 6; j++){
+            song = new ArrayList<String>();
+              for(int j = 0; j < 6; j++){
                 song.add(Songs[j]);
               }
               exploreSongs.add(song);
@@ -127,13 +116,13 @@ public class musicSug{
             int a = i+1;
             System.out.print(a +": ");
             if(randIndex != temp){
-              for(int j = 0; j < 5; j++){
+              for(int j = 1; j < 6; j++){
                 System.out.print(exploreSongs.get(randIndex).get(j)+"  |  ");
               }
             }
             else{
               randIndex++;
-              for(int j = 0; j < 5; j++){
+              for(int j = 1; j < 6; j++){
                 System.out.print(exploreSongs.get(randIndex).get(j)+"  |  ");
               }
             }
@@ -155,45 +144,43 @@ public class musicSug{
             }
         }
 
+      //@Here ************************************************************************************
+      for(int i : randomIndexes){
+        System.out.println(i);}
       System.out.println("Do you like any of these songs?(y/n)");
       if(answer()==true){
         addSong();
-      }
+      }System.out.println("You are at menu now");
   }
 
   public static void addSong(){
     //problems here: I can do copy from csv to csv
     //also, implement a search would be better
     scan = new Scanner(System.in);
-      System.out.println("What is the number of the song?");
-      int index = scan.nextInt()-1;
-      System.out.println(exploreSongs.get(randomIndexes[index]).get(0));
-      /*SEARCH FOR INDEX IN randomIndexs
-      String csvIndex = randomIndexs[index];
-      */
-/*
-      char like = 'y';
-
-    data newSong = new data(song, artist, year, genre, like);
-    List<data> adds = new ArrayList<data>();
-    adds.add(newSong);
+    System.out.println("What is the number of the song?");
+    int index = scan.nextInt()-1;
+    exploreSongs.get(randomIndexes[index]).set(5, "y");
+    for(int i = 1; i < 6; i++){
+      System.out.print(exploreSongs.get(randomIndexes[index]).get(i));
+      if(i<5){
+        System.out.print("  |  ");
+      }
+    }
 
     FileWriter fileWriter = null;
     try{
       fileWriter = new FileWriter(csvLike, true);
 
-      for(data Songs : adds){
-        fileWriter.append(Songs.getSong());
+        fileWriter.append(exploreSongs.get(randomIndexes[index]).get(1));
         fileWriter.append(",");
-        fileWriter.append(Songs.getArtist());
+        fileWriter.append(exploreSongs.get(randomIndexes[index]).get(2));
         fileWriter.append(",");
-        fileWriter.append(String.valueOf(Songs.getYear()));
+        fileWriter.append(exploreSongs.get(randomIndexes[index]).get(3));
         fileWriter.append(",");
-        fileWriter.append(Songs.getGenre());
+        fileWriter.append(exploreSongs.get(randomIndexes[index]).get(4));
         fileWriter.append(",");
-        fileWriter.append(String.valueOf(Songs.getLike()));
+        fileWriter.append(exploreSongs.get(randomIndexes[index]).get(5));
         fileWriter.append("\n");
-      }
       fileWriter.flush();
     }catch(Exception e){
       System.out.println("Error in CsvFileWriter !!!");
@@ -206,8 +193,34 @@ public class musicSug{
         e.printStackTrace();
       }
     }
-    System.out.println("The song has been added to your like list!\n"+"Back to menu...");
-*/
+    System.out.println("\nThe song has been added to your like list!\n"+"You are at meun now.");
+
+    BufferedWriter writer = null;
+    try{
+    writer = new BufferedWriter(new FileWriter(csvTest));
+    for(int i = 0; i < lineCount; i++){
+      for(int j = 0; j < 6; j++){
+        writer.write(exploreSongs.get(i).get(j));
+        if(j<5){
+          writer.write(",");
+        }
+      }
+      writer.newLine();
+    }
+    writer.flush();
+    } catch (FileNotFoundException e) {
+        e.printStackTrace();
+    } catch (IOException e) {
+        e.printStackTrace();
+    } finally {
+        if (writer != null) {
+            try {
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
   }
 
 //return song that user might likes
@@ -255,6 +268,7 @@ public class musicSug{
           SAG.readGenre();
         }
         else if(command.equals("stop")){
+          System.out.println("You are at menu now.");
           break;
         }
         else{
