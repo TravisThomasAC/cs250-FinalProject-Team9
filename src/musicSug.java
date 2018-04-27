@@ -188,7 +188,7 @@ public class musicSug{
         e.printStackTrace();
       }
     }
-    System.out.println("\nThe song has been added to your like list!\n");
+    System.out.println("\nThe song has been added to your like list!");
 
     BufferedWriter writer = null;
     try{
@@ -220,7 +220,8 @@ public class musicSug{
 
 //return song that user might likes
   public static void dailySelection(){
-
+    System.out.println("dailySelection feature coming soon...");
+    System.out.println("You are at menu now!(Sorry...)");
   }
 
   public static boolean answer(){

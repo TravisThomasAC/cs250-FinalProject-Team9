@@ -29,5 +29,5 @@ To use our code,
 
 ### Presentation
 
-For actual slides, go [here]().
+For actual slides, go [here](https://cdn.rawgit.com/liux2/cs250-FinalProject-Team9-Presentation/master/presentation.html).
 If you want to check the raw code of my presentation, you can check our another [repository](https://github.com/liux2/cs250-FinalProject-Team9-Presentation).
