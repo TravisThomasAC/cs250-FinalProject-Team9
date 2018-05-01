@@ -66,7 +66,6 @@ public class DailySelection{
               }
           }
           findFromCloud();
-          System.out.println("mean: "+mean);
     }
 
     public void findFromCloud(){
@@ -111,7 +110,6 @@ public class DailySelection{
             for(int i = 0; i < likeLength; i++){
               if(Integer.parseInt(exploreSongs.get(i).get(6)) == mean){
                 likeIndex.add(i);//add line numbers which equals mean
-                System.out.println(i);
               }
             }
             //random Selection

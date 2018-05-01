@@ -1,0 +1,47 @@
+---
+title: "CMPSC 250 Final Project: Final Report"
+author: "Xingbang Liu, Matt Jones, Travis Thomas"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  pdf_document: default
+subtitle: "Instructor: Dr. Mohan"
+---
+***
+
+## Motivation
+
+- Why is it important
+- How is it useful
+
+## Background for problem
+
+- Current uses of the algorithms
+  
+    There are many algorithms to find similar songs. Here are two examples of the algorithms:
+    
+#### Memory-based
+
+    Generaly, user would be grouped in this algorithm. In this method, the algorithm will first track down people who have similar activities, then recommend songs to each other by their playlists. For example, action score could be assigned as: 
+
+    
+  | Repeat song | Share | Like | Play | Played completely | Skip | Dislike |
+  | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+  |   5   |   4   |   3   |   2   |   1   |   -1  |   -5  |
+    
+- How is it being used
+- How could it be improved
+- General Background
+
+## Algorithm Description
+
+- Pseudocode
+- Diagrams
+- Time Complexities
+- Previous algorithms
+
+## Conclusion
+
+- Results
+- Takeaways
+- Challenges
+- Rewards
