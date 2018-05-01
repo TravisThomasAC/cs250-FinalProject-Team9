@@ -1,11 +1,10 @@
-package test;
 import java.util.*;
 import java.io.*;
 
 public class musicSug{
-  public static final String csvCloud = "../dataset/music.csv";
-  public static final String csvLike = "../dataset/liked.csv";
-  public static final String csvTest = "../dataset/test.csv";
+  /*private static final String csvCloud = "../dataset/music.csv";
+  private static final String csvLike = "../dataset/liked.csv";
+  private static final String csvTest = "../dataset/test.csv";*/
   private static Scanner scan;
   public static void main(String[] args) {
     do{
@@ -43,6 +42,10 @@ public class musicSug{
       }
       else if(command.equals("3")){
         ds.dailySelection();
+        System.out.println("Do you like any of these songs?(y/n)");
+        if(answer()==true){
+          ds.addTo();
+        }System.out.println("You are at menu now");
       }
       else if(command.equals("4")){
         break;
@@ -52,7 +55,7 @@ public class musicSug{
         System.out.println("Please select number.");
       }
     }
-    System.out.println("Would you like to play again? (y/n)");
+    System.out.println("Are you sure you want to quit? (y/n)");
   }
 
   public static boolean answer(){

@@ -23,7 +23,7 @@ Also, the PDF file we have here contains clickable URL which cannot be shown in 
 
 To use our code,
 
-1. download the whole repository, then use ```cd src/``` to go to ***src*** repository.
+1. download the whole repository, then use ```cd test/``` to go to ***test*** repository.
 2. use ```javac *.java``` to compile every java file in this repository, then use ```java musicSug``` to run main class.
 3. follow the prompt in terminal.
 

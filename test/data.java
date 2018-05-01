@@ -1,4 +1,3 @@
-package test;
 public class data{
     private int year;
     private String song;

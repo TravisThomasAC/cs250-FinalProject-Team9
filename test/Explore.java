@@ -1,12 +1,11 @@
-package test;
 import java.util.*;
 import java.io.*;
 
 public class Explore{
   private Scanner scan;
-  // private final String csvCloud = "../dataset/music.csv";
-  // private final String csvLike = "../dataset/liked.csv";
-  // private final String csvTest = "../dataset/test.csv";
+  private final String csvCloud = "../dataset/music.csv";
+  private final String csvLike = "../dataset/liked.csv";
+  private final String csvTest = "../dataset/test.csv";
   private ArrayList<String> song;
   private ArrayList<ArrayList<String>> exploreSongs = new ArrayList<ArrayList<String>>();
   private int[] randomIndexes = new int[5];
