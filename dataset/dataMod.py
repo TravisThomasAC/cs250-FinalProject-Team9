@@ -9,7 +9,7 @@ def melodyRating():
     totalrows = len(df['SongID'])
 
     for i in range(totalrows):
-        rand = randint(1,10)
+        rand = randint(2,10)
         ratings.append(rand)
 
     return ratings
@@ -18,15 +18,16 @@ def melodyRating():
 def createColumn():
 
     ratings = melodyRating()
+    '''
     HEADER = [["Melody"]]
     NEWFILE = open("music2.csv", 'w')
     with NEWFILE:
         writer = csv.writer((NEWFILE),lineterminator='\n')
         #writer.writerows(HEADER)
-
+        '''
     for i in range(len(ratings)):
         data = [[ratings[i]]]
-        NEWFILE = open("music2.csv",'a')
+        NEWFILE = open("music2.csv",'w')
         with NEWFILE:
             writer = csv.writer((NEWFILE),lineterminator='\n')
             writer.writerows(data)
