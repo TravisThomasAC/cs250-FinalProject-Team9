@@ -29,7 +29,7 @@ subtitle: 'Instructor: Dr. Mohan'
 
 #### Memory-based
 
-Generaly, user would be grouped in this algorithm. In this method, the algorithm will first track down people who have similar activities, then recommend songs to each other by their playlists. For example, action score could be assigned as:
+Generally, user would be grouped in this algorithm. In this method, the algorithm will first track down people who have similar activities, then recommend songs to each other by their playlists. For example, action score could be assigned as:
 
 
   | Repeat song | Share | Like | Play | Played completely | Skip | Dislike |
