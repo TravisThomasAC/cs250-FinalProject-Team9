@@ -24,7 +24,7 @@ subtitle: "Instructor: Dr. Mohan"
 
 ## Background for problem
 
-  There are many algorithms to find similar songs. Here are two examples of the Collaborative ???ltering:
+  There are many algorithms to find similar songs. Here are two examples of the Collaborative filtering:
 
 #### Memory-based
 
