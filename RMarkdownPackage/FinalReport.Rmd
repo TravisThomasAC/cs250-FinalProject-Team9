@@ -1,7 +1,7 @@
 ---
 title: 'CMPSC 250 Final Project: Final Report'
 author: "Xingbang Liu, Matt Jones, Travis Thomas"
-date: '`r format(Sys.time(), '%d %B %Y')`'
+date: '02 May 2018'
 output:
   pdf_document: default
   word_document: default
@@ -29,7 +29,7 @@ subtitle: 'Instructor: Dr. Mohan'
 
 #### Memory-based
 
-  Generaly, user would be grouped in this algorithm. In this method, the algorithm will first track down people who have similar activities, then recommend songs to each other by their playlists. For example, action score could be assigned as:
+Generaly, user would be grouped in this algorithm. In this method, the algorithm will first track down people who have similar activities, then recommend songs to each other by their playlists. For example, action score could be assigned as:
 
 
   | Repeat song | Share | Like | Play | Played completely | Skip | Dislike |
@@ -80,11 +80,13 @@ $$
 
 #### Pseudocode
 
-  `For each liked song:`
-    `append to likedlist;`
-  `mean = (sum of melodies)/likedListLength;`
-  `for exploreSong['melody'] == mean:`
-    `return song;`
+```
+  For each liked song:
+    append to likedlist;
+  mean = (sum of melodies)/likedListLength;
+  for exploreSong['melody'] == mean:
+    return song;
+```
 
   This is a very basic description of the algorithm but it explains the though process behind the algorithm used to return songs. Essentially, we ask the user pick songs that they like. This will add those liked songs to the liked list. Using, the songs from the liked list, we find the mean of the melodies within the liked list. This mean is then used to search the main music database and return a set of songs that match the mean melody score of the liked list. The melody score is just one way we can return a set of recommended songs, there are other variables that can be and will be included in the future. The inclusion of these variables will not only give us a more desirable list of recommended songs for user but will also allow for options when returning a set of songs. For example, if a user wants a playlist to workout to, we may want to return songs with high melody scores that are more upbeat.
 
