@@ -1,10 +1,11 @@
 ---
-title: "CMPSC 250 Final Project: Final Report"
+title: 'CMPSC 250 Final Project: Final Report'
 author: "Xingbang Liu, Matt Jones, Travis Thomas"
-date: "`r format(Sys.time(), '%d %B %Y')`"
+date: '`r format(Sys.time(), '%d %B %Y')`'
 output:
   pdf_document: default
-subtitle: "Instructor: Dr. Mohan"
+  word_document: default
+subtitle: 'Instructor: Dr. Mohan'
 ---
 ***
 
@@ -75,12 +76,25 @@ $$
   These algorithms are not perfect, they could be limited when there are not enough users. For example, if a start up music service company wants to suggest songs to user, they have to use an algorithm which works when there are not enough users and user action data. In this situation, it would be better if the company could depend on the music only, for example, music metadata, rather than depend on user data. In our algorithm, we hard coded melody scores, From 1 to 10, the faster the higher, for each songs. This score simulated music classification data. By getting a mean score from user liked list, we can find more songs by their mean score. This method is more like a weaker version of the combination of nature language processing and raw audio analyze. In nature language processing, the program would analyze the lyrics, then get the emotion data. In raw audio analyze, the program would analyze the audio frames, and finally get an score for audio characteristic.  
 
 
-## Algorithm Description
+## Program and Algorithm Description
 
-- Pseudocode
-- Diagrams
-- Time Complexities
-- Previous algorithms
+#### Pseudocode
+
+  `For each liked song:`
+    `append to likedlist;`
+  `mean = (sum of melodies)/likedListLength;`
+  `for exploreSong['melody'] == mean:`
+    `return song;`
+
+  This is a very basic description of the algorithm but it explains the though process behind the algorithm used to return songs. Essentially, we ask the user pick songs that they like. This will add those liked songs to the liked list. Using, the songs from the liked list, we find the mean of the melodies within the liked list. This mean is then used to search the main music database and return a set of songs that match the mean melody score of the liked list. The melody score is just one way we can return a set of recommended songs, there are other variables that can be and will be included in the future. The inclusion of these variables will not only give us a more desirable list of recommended songs for user but will also allow for options when returning a set of songs. For example, if a user wants a playlist to workout to, we may want to return songs with high melody scores that are more upbeat.
+
+#### Diagram
+
+  **Figure 1** is a basic outline of the interaction between classes in our program. The `music.csv` file is fed into `explore.java`, returning random songs with its explore function and also sends the liked songs to `liked.csv` with its add function. The liked songs are used by `DailySelection.java` and `Like.java`. DailySelection uses the algorithm discussed in the pseudocode to return songs that match the mean melody rating of the songs found in the liked list. The Like class sorts the liked list by either song, genre, artist, or year. `Like.java` calls `SortInt` to sort the year and `SortString.java` to sort the other categories. `MusicSug.java` is the main method and gives the user a command-line interface to interact with music recommender system, calling the functions mentioned above.
+
+#### Time Complexities
+
+  **Figure2** Represents the time complexities of the Bubble sort and Exchange sort after four runs. `SortInt.java` utilizes the bubble sort method to sort the year songs within the liked list. `SortString.java` utilizes exchange sort to sort each of the other categories. We found a worst-case time complexity of O(n^2^) for both sorting algorithms. We decided to used these algorithms because we do not anticipate large scale growth in our liked list in its current state. That is the program only accounts for a single user and the user will not produce enough songs on the liked list to mandate a different algorithm.
 
 ## Conclusion
 
@@ -88,28 +102,34 @@ $$
 
   While analyzing our results, note that our program doesn't take into account things like artist, genre, instruments used, etc. when suggesting songs. However, the program does take a unique approach to song suggesting, and runs without any bugs (caused by the user and/or built into our system).
 
-  **Figure 1** shows the Main Menu of our program. It offers four options: Like (prints liked songs), Explore (Finds and adds new songs to the users liked songs), Daily Selection (Makes a playlist similar to the songs in the users liked-list), Quit (Exits the program)
+  **Figure 3** shows the Main Menu of our program. It offers four options: Like (prints liked songs), Explore (Finds and adds new songs to the users liked songs), Daily Selection (Makes a playlist similar to the songs in the users liked-list), Quit (Exits the program)
 
-  **Figure 2** shows the first feature: Print Liked Songs & Sort them.
+  **Figure 4** shows the first feature: Print Liked Songs & Sort them.
 
-  **Figure 3** shows the second feature: Finds 5 songs for the user, and the user picks a song (in this case, song 3) to add to their liked songs. Then **figure 4** shows the updated liked songs with new addition from feature #2.
+  **Figure 5** shows the second feature: Finds 5 songs for the user, and the user picks a song (in this case, song 3) to add to their liked songs. Then **figure 6** shows the updated liked songs with new addition from feature #2.
 
-  **Figure 5** shows the third feature: Gives you two song selections similar to your liked list tempo, and then the user adds these songs to their liked songs.
+  **Figure 7** shows the third feature: Gives you two song selections similar to your liked list tempo, and then the user adds these songs to their liked songs.
 
-  **Figure 6** shows updated liked songs with new addition from feature #3.
+  **Figure 8** shows updated liked songs with new addition from feature #3.
 
-  **Figure 7** shows the fourth feature: Quit/exits the program.
+  **Figure 9** shows the fourth feature: Quit/exits the program.
 
-- Takeaways
+#### Takeaways
+  There are a few notable takeaways from researching and implementing our final project. First, collaborative filtering algorithms are complex and take into account many, many variables. There are many components that make up a song, thus creating accurate predictions requires a lot of data. Second, collaborative is difficult to implement if multiple users are not involved. Our program only accounts for a single user and single liked list. An optimal implementation would call for multiple user's liked lists to be compared across the program, to find similar user interests so we can recommend songs based off of similar user's playlists and interests. Overall, are program is a solid first-step in implementing a music recommender that is capable of taking in unique parameters, such as melody score, to recommend songs to users.
 
 #### Challenges
 
 Their were a few obvious problems that our group encountered that was to be expected. Because our program has many different working parts, we had to split it up and then either comment the code in a way so that our other group members could explain it. Alternatively to commenting every bit of code, we also met many times to try to explain our code to the rest of the group.
 	The biggest challenge our group had was working with the "cloud music list" (aka our Music.csv) and figuring out how to edit this list without messing us the csv file and the rest of our program. Our solution was to make a "working csv file" (Test.csv)  that was the file we actually made edits to, while the "cloud file" (Music.csv) was left alone so that the edits didn't cause any problems with the rest of the program.
 
-- Rewards
+### Rewards
+ The process of this project as been rewarding at every step. The research that went into the project to learn about collaborative filtering and common algorithms used to recommend songs was interesting as we all frequently use these music apps. So, learning how these apps recommend daily playlists and songs that we may like is intriguing. Implementation was rewarding in its challenges. Every obstacle overcame was its own reward. We have newfound respect for programmers that are responsible for implementing and maintaining these algorithms because we know the amount of data and variables that goes into proper implementation.
 
 ## Index
+
+ ![diagram](../images/diagram.PNG)
+
+ ![Time Complexities](../images/TimeComplex.PNG)
 
  ![menu](../images/menu.png)
 
